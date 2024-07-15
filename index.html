@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Decodificador</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho_informacao">
+            <img class="cabecalho_logo" src="assets/img/logo_alura.png" alt="Logo da Alura">
+            <button class="cabecalho_botao" onclick="limparCampo()" id="limparcampo">Limpar campo</button>
+        </div>
+    </header>
+
+    <main class="conteudo">
+        <form class="conteudo_informacao">
+            <textarea class="conteudo_informacao_texto" id="input-text" placeholder="Digite seu texto"></textarea>
+            <p class="conteudo_informacao_paragrafo">
+                <img src="assets/img/info.png" alt="ícone de informação">
+                Apenas letras minúsculas e sem acento.
+            </p>
+            <div class="conteudo_informacao_botao">
+                <button class="conteudo_informacao_criptografar_botao" type="submit"
+                    id="criptografar">Criptografar</button>
+                <button class="conteudo_informacao_descriptografar_botao" type="submit"
+                    id="descriptografar">Descriptografar</button>
+            </div>
+        </form>
+    </main>
+
+    <aside class="conteudo_mensagem" id="conteudo_mensagem">
+        <img class="conteudo_mensagem_logo" src="assets/img/logo_desenho.jpg"
+            alt="Imagem de um menino olhando um diamante numa lupa">
+        <strong>Nenhuma mensagem encontrada</strong>
+        <p>Digite um texto que você deseja criptografar ou
+            descriptografar.</p>
+    </aside>
+
+    <!-- <footer class="rodape">
+        <p>Desenvolvido por Vittorio</p>
+    </footer> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

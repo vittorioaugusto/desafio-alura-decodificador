@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+:root {
+    --cor-primaria: #D8DFE8;
+    --cor-secundaria: #FFFFFF;
+    --cor-terciaria: #0A3871;
+    --cor-quaternaria: #495057;
+
+    --fonte-primaria: "Roboto", sans-serif;
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    display: grid;
+    grid-template-columns: 10% 1fr 30%;
+    gap: 50px;
+    padding: 20px;
+    font-family: var(--fonte-primaria);
+}
+
+.cabecalho {
+    padding: 5% 0 0 5%;
+}
+
+.cabecalho_informacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.cabecalho_botao {
+    padding: 10px;
+    background-color: var(--cor-terciaria);
+    border-radius: 10px;
+    color: var(--cor-secundaria);
+    cursor: pointer;
+    border: none;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo_informacao {
+    margin-top: 10rem;
+}
+
+.conteudo_informacao_texto {
+    resize: none;
+    width: 100%;
+    height: 400px;
+    font-size: 3rem;
+    color: var(--cor-terciaria);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    line-height: 100%;
+}
+
+.conteudo_informacao_texto::placeholder {
+    color: var(--cor-terciaria);
+}
+
+.conteudo_informacao_paragrafo {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--cor-quaternaria);
+    font-size: 1.5rem;
+}
+
+.conteudo_informacao_botao {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.conteudo_informacao_criptografar_botao {
+    flex: 1;
+    padding: 2.4rem;
+    background-color: var(--cor-terciaria);
+    border-radius: 24px;
+    border: none;
+    color: var(--cor-secundaria);
+    cursor: pointer;
+}
+
+.conteudo_informacao_descriptografar_botao {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--cor-primaria);
+    border: 1px solid var(--cor-terciaria);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.conteudo_mensagem {
+    background-color: var(--cor-secundaria);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.conteudo_mensagem strong {
+    margin: 3.5rem 0rem 1.6rem 0rem;
+    color: var(--cor-quaternaria);
+    font-size: 2.5rem;
+}
+
+.conteudo_mensagem p {
+    color: var(--cor-quaternaria);
+    font-size: 1.5rem;
+}
+
+.conteudo_mensagem #input-text-copy {
+    flex: 1;
+    width: 100%;
+    color: var(--cor-quaternaria);
+    font-size: 2.5rem;
+    line-height: 150%;
+    text-align: start;
+    word-wrap: break-word;
+}
+
+.conteudo_mensagem #button-copy {
+    background-color: transparent;
+    border: 1px solid var(--cor-terciaria);
+    color: var(--cor-terciaria);
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+@media(max-width: 1115px) {
+    .conteudo_mensagem_logo {
+        width: 300px;
+    }
+}
+
+@media(max-width: 1070px) {
+    body {
+        gap: 1.5rem;
+        padding-left: 0rem;
+    }
+
+    .conteudo_mensagem_logo {
+        width: 250px;
+    }
+}
+
+@media(max-width: 900px) {
+    .cabecalho_logo {
+        margin-top: 3rem;
+    }
+
+    .conteudo_mensagem_logo {
+        width: 200px;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        gap: 6.4rem;
+        padding: 4rem;
+    }
+
+    main {
+        margin-top: -6rem;
+    }
+
+    .conteudo_mensagem strong {
+        margin: 0rem 0rem 1.6rem 0rem;
+
+    }
+}
+
+@media(max-width: 465px) {
+    .conteudo_informacao .contain-buttons {
+        flex-direction: column;
+    }
+
+    .conteudo_informacao button {
+        width: 100%;
+    }
+}
