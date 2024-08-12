@@ -32,11 +32,12 @@ function descriptografarTexto(mensagem) {
 }
 
 function updateCopiaTexto(texto) {
-    inputCopiaDoTexto.innerText = texto
-    copiaTexto.innerHTML = ''
-    copiaTexto.appendChild(inputCopiaDoTexto)
-    copiaTexto.appendChild(botaoCopiar)
-    document.getElementById("button-copy").style.cursor = "pointer"
+    inputCopiaDoTexto.innerText = texto;
+    copiaTexto.innerHTML = '';
+    copiaTexto.appendChild(inputCopiaDoTexto);
+    copiaTexto.appendChild(botaoCopiar);
+    botaoCopiar.style.cursor = "pointer";
+    botaoCopiar.style.fontSize = "16px";
 }
 
 function contemMaiusculasOuAcentos(texto) {
@@ -48,7 +49,16 @@ function contemMaiusculasOuAcentos(texto) {
 botaoCriptografar.addEventListener('click', function (evento) {
     evento.preventDefault()
     const texto = conteudoDoTexto.value
-    if (contemMaiusculasOuAcentos(texto)) {
+    if (texto === '') {
+        Swal.fire({
+            title: "Atenção",
+            text: "Por favor, insira algum texto antes de criptografar.",
+            icon: "warning",
+            confirmButtonColor: "#0A3871",
+            confirmButtonText: "OK"
+        });
+        return false;
+    } else if (contemMaiusculasOuAcentos(texto)) {
         conteudoDoTexto.value = 'O texto não deve conter letras maiúsculas ou acentos.'
     } else {
         const textoCriptografado = criptografarTexto(texto)
